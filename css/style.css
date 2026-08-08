@@ -221,6 +221,22 @@ header.site {
 .trustbar span { display: flex; align-items: center; gap: 8px; }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); display: inline-block; }
 
+/* ---------- 신뢰 문구 배너 ---------- */
+.quote-band {
+  background: var(--ink);
+  color: var(--bone);
+  text-align: center;
+  padding: 56px 0;
+}
+.quote-band .quote {
+  font-family: 'Black Han Sans', 'Pretendard Variable', sans-serif;
+  font-size: 26px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+.quote-band .quote .hl { color: var(--amber); }
+.quote-band .quote-sub { font-size: 13.5px; color: #A9B4BB; }
+
 /* ---------- 섹션 공통 ---------- */
 section { padding: 72px 0; }
 .section-head { max-width: 620px; margin-bottom: 44px; }
@@ -259,6 +275,64 @@ section { padding: 72px 0; }
 .symptom-card p { font-size: 13.5px; color: var(--steel); margin-bottom: 14px; }
 .symptom-card .price { font-weight: 800; color: var(--copper); font-size: 14px; }
 .symptom-card a.more { font-size: 13px; font-weight: 700; color: var(--teal); margin-top: 10px; display: inline-block; }
+
+/* ---------- 시공 사례 ---------- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.portfolio-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--bone-dim);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.portfolio-card:hover { border-color: var(--amber); }
+.portfolio-thumb {
+  height: 140px;
+  background: linear-gradient(135deg, var(--ink), var(--ink-soft));
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+.portfolio-card h4 { font-size: 15.5px; margin: 16px 18px 6px; }
+.portfolio-card p { font-size: 13px; color: var(--steel); margin: 0 18px 18px; }
+
+/* ---------- FAQ ---------- */
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--bone-dim);
+  border-radius: 6px;
+  padding: 4px 22px;
+}
+.faq-item summary {
+  padding: 18px 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 20px;
+  color: var(--amber);
+  flex: none;
+}
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { font-size: 14px; color: var(--steel); margin: 0 0 20px; }
 
 /* ---------- 지역+증상 커버리지 (SEO 핵심 섹션) ---------- */
 .coverage {
@@ -398,10 +472,12 @@ footer.site {
   .nav-links { display: none; }
   .symptom-line { grid-template-columns: 1fr; }
   .symptom-card { border-right: none; }
+  .portfolio-grid { grid-template-columns: 1fr; }
   .coverage-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
   .process { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { flex-direction: column; }
+  .quote-band .quote { font-size: 21px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
