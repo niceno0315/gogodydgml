@@ -1,7 +1,7 @@
 /* ============================================
    배관/하수구 긴급출동 서비스 — 디자인 시스템
-   Palette: Ink Navy #14212C / Steel #3C4E5C / Amber #E8A33D
-            Copper #B5651D / Bone #F5F2EA / Teal(trust) #2F6E63
+   Palette: Sky Blue #0B63B8 / Steel #4C6478 / Amber #FF9F1C
+            Copper #E8590C / Bone #F6FAFE / Teal(trust) #0EA5A0
    Display: Black Han Sans / Body: Pretendard
    ============================================ */
 
@@ -9,18 +9,18 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css');
 
 :root {
-  --ink: #14212C;
-  --ink-soft: #1F3140;
-  --steel: #3C4E5C;
-  --steel-line: #2A3A46;
-  --amber: #E8A33D;
-  --amber-bright: #FFC266;
-  --copper: #B5651D;
-  --bone: #F5F2EA;
-  --bone-dim: #E8E2D3;
-  --teal: #2F6E63;
-  --teal-bright: #47968A;
-  --danger: #C1462F;
+  --ink: #0B63B8;
+  --ink-soft: #1174CE;
+  --steel: #4C6478;
+  --steel-line: #3480C9;
+  --amber: #FF9F1C;
+  --amber-bright: #FFC24D;
+  --copper: #E8590C;
+  --bone: #F6FAFE;
+  --bone-dim: #E3EEF8;
+  --teal: #0EA5A0;
+  --teal-bright: #2DD4C6;
+  --danger: #EF4444;
   --radius: 4px;
   --max: 1120px;
 }
@@ -152,7 +152,7 @@ header.site {
 .hero h1 .hl { color: var(--amber); }
 .hero p.lead {
   font-size: 17px;
-  color: #C9D2D8;
+  color: #DCEBFA;
   max-width: 46ch;
   margin-bottom: 28px;
 }
@@ -168,7 +168,7 @@ header.site {
   color: var(--amber-bright);
   display: block;
 }
-.stat span { font-size: 13px; color: #A9B4BB; }
+.stat span { font-size: 13px; color: #B9D4EC; }
 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
   display: inline-flex;
@@ -206,7 +206,7 @@ header.site {
 /* ---------- 신뢰 배지 스트립 ---------- */
 .trustbar {
   background: var(--bone-dim);
-  border-bottom: 1px solid #DCD5C2;
+  border-bottom: 1px solid #CFE3F5;
   padding: 18px 0;
 }
 .trustbar .wrap {
@@ -235,7 +235,7 @@ header.site {
   margin: 0 0 14px;
 }
 .quote-band .quote .hl { color: var(--amber); }
-.quote-band .quote-sub { font-size: 13.5px; color: #A9B4BB; }
+.quote-band .quote-sub { font-size: 13.5px; color: #B9D4EC; }
 
 /* ---------- 섹션 공통 ---------- */
 section { padding: 72px 0; }
@@ -339,7 +339,7 @@ section { padding: 72px 0; }
   background: var(--ink);
   color: var(--bone);
 }
-.coverage .section-head p { color: #A9B4BB; }
+.coverage .section-head p { color: #B9D4EC; }
 .coverage-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -438,7 +438,7 @@ section { padding: 72px 0; }
 /* ---------- 푸터 ---------- */
 footer.site {
   background: var(--ink);
-  color: #93A0A8;
+  color: #8FB4D6;
   padding: 44px 0 26px;
   font-size: 13px;
 }
