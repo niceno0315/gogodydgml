@@ -1,0 +1,409 @@
+/* ============================================
+   배관/하수구 긴급출동 서비스 — 디자인 시스템
+   Palette: Ink Navy #14212C / Steel #3C4E5C / Amber #E8A33D
+            Copper #B5651D / Bone #F5F2EA / Teal(trust) #2F6E63
+   Display: Black Han Sans / Body: Pretendard
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css');
+
+:root {
+  --ink: #14212C;
+  --ink-soft: #1F3140;
+  --steel: #3C4E5C;
+  --steel-line: #2A3A46;
+  --amber: #E8A33D;
+  --amber-bright: #FFC266;
+  --copper: #B5651D;
+  --bone: #F5F2EA;
+  --bone-dim: #E8E2D3;
+  --teal: #2F6E63;
+  --teal-bright: #47968A;
+  --danger: #C1462F;
+  --radius: 4px;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+  background: var(--bone);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .display {
+  font-family: 'Black Han Sans', 'Pretendard Variable', sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--amber);
+  display: inline-block;
+}
+
+/* ---------- 상단 긴급 바 ---------- */
+.hotbar {
+  background: var(--danger);
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  letter-spacing: 0.02em;
+}
+.hotbar strong { text-decoration: underline; }
+
+/* ---------- 헤더 ---------- */
+header.site {
+  background: var(--ink);
+  color: var(--bone);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--steel-line);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.brand {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 22px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.brand small {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 12px;
+  color: var(--amber);
+  font-weight: 600;
+}
+.nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 600; }
+.nav-links a { opacity: 0.85; }
+.nav-links a:hover { opacity: 1; color: var(--amber); }
+.nav-call {
+  background: var(--amber);
+  color: var(--ink);
+  font-weight: 800;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.nav-menu-toggle { display: none; }
+
+/* ---------- 히어로 ---------- */
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(232,163,61,0.14), transparent 55%),
+    var(--ink);
+  color: var(--bone);
+  padding: 72px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -60px; top: -40px;
+  width: 420px; height: 420px;
+  border: 2px solid var(--steel-line);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+}
+.hero h1 {
+  font-size: 46px;
+  margin-bottom: 18px;
+}
+.hero h1 .hl { color: var(--amber); }
+.hero p.lead {
+  font-size: 17px;
+  color: #C9D2D8;
+  max-width: 46ch;
+  margin-bottom: 28px;
+}
+.hero-stats {
+  display: flex;
+  gap: 28px;
+  margin: 30px 0 34px;
+  flex-wrap: wrap;
+}
+.stat b {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 30px;
+  color: var(--amber-bright);
+  display: block;
+}
+.stat span { font-size: 13px; color: #A9B4BB; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 26px;
+  border-radius: var(--radius);
+  font-weight: 800;
+  font-size: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--amber); color: var(--ink); }
+.btn-primary:hover { background: var(--amber-bright); }
+.btn-outline { border-color: var(--steel-line); color: var(--bone); }
+.btn-outline:hover { border-color: var(--amber); color: var(--amber); }
+
+.hero-card {
+  background: var(--ink-soft);
+  border: 1px solid var(--steel-line);
+  border-radius: 6px;
+  padding: 26px;
+}
+.hero-card h3 { color: var(--amber); font-size: 17px; margin-bottom: 14px; }
+.diag-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--steel-line);
+  font-size: 14px;
+}
+.diag-row:last-child { border-bottom: none; }
+.diag-row span:last-child { color: var(--teal-bright); font-weight: 700; }
+
+/* ---------- 신뢰 배지 스트립 ---------- */
+.trustbar {
+  background: var(--bone-dim);
+  border-bottom: 1px solid #DCD5C2;
+  padding: 18px 0;
+}
+.trustbar .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--steel);
+}
+.trustbar span { display: flex; align-items: center; gap: 8px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); display: inline-block; }
+
+/* ---------- 섹션 공통 ---------- */
+section { padding: 72px 0; }
+.section-head { max-width: 620px; margin-bottom: 44px; }
+.section-head h2 { font-size: 32px; }
+.section-head p { color: var(--steel); margin-top: 12px; font-size: 15px; }
+
+/* ---------- 증상 카드 (핵심 시그니처 요소: 파이프라인 다이어그램) ---------- */
+.symptom-line {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--bone-dim);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.symptom-card {
+  padding: 30px 26px;
+  border-right: 1px solid var(--bone-dim);
+  border-bottom: 1px solid var(--bone-dim);
+  position: relative;
+}
+.symptom-card:nth-child(3n) { border-right: none; }
+.symptom-card .num {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 13px;
+  color: var(--amber);
+  background: var(--ink);
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+.symptom-card h3 { font-size: 18px; margin-bottom: 8px; }
+.symptom-card p { font-size: 13.5px; color: var(--steel); margin-bottom: 14px; }
+.symptom-card .price { font-weight: 800; color: var(--copper); font-size: 14px; }
+.symptom-card a.more { font-size: 13px; font-weight: 700; color: var(--teal); margin-top: 10px; display: inline-block; }
+
+/* ---------- 지역+증상 커버리지 (SEO 핵심 섹션) ---------- */
+.coverage {
+  background: var(--ink);
+  color: var(--bone);
+}
+.coverage .section-head p { color: #A9B4BB; }
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.coverage-grid a {
+  background: var(--ink-soft);
+  border: 1px solid var(--steel-line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.coverage-grid a:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---------- 후기 (당근형 소셜프루프) ---------- */
+.reviews-strip {
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.reviews-strip .score {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 44px;
+  color: var(--copper);
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid var(--bone-dim);
+  border-radius: 6px;
+  padding: 22px;
+}
+.review-card .who {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--steel);
+  margin-bottom: 10px;
+}
+.review-card .stars { color: var(--amber); letter-spacing: 2px; margin-bottom: 8px; }
+.review-card p { font-size: 14px; }
+.review-card .reply {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--bone);
+  border-radius: 4px;
+  font-size: 12.5px;
+  color: var(--teal);
+}
+
+/* ---------- 가격표 ---------- */
+.price-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.price-table th, .price-table td {
+  text-align: left;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--bone-dim);
+}
+.price-table th { color: var(--steel); font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; }
+.price-table td.amt { color: var(--copper); font-weight: 800; white-space: nowrap; }
+.price-note { font-size: 12.5px; color: var(--steel); margin-top: 14px; }
+
+/* ---------- 프로세스 ---------- */
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.process li { list-style: none; position: relative; }
+.process .step-num {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 34px;
+  color: var(--bone-dim);
+  -webkit-text-stroke: 1.5px var(--amber);
+  display: block;
+  margin-bottom: 10px;
+}
+.process h4 { font-size: 15.5px; margin-bottom: 6px; }
+.process p { font-size: 13px; color: var(--steel); }
+
+/* ---------- CTA 배너 ---------- */
+.cta-band {
+  background: linear-gradient(120deg, var(--amber), var(--amber-bright));
+  color: var(--ink);
+  padding: 50px 0;
+  text-align: center;
+}
+.cta-band h2 { font-size: 28px; margin-bottom: 10px; }
+.cta-band p { margin-bottom: 22px; font-weight: 600; }
+.cta-band .btn-primary { background: var(--ink); color: var(--bone); }
+.cta-band .btn-primary:hover { background: var(--ink-soft); }
+
+/* ---------- 푸터 ---------- */
+footer.site {
+  background: var(--ink);
+  color: #93A0A8;
+  padding: 44px 0 26px;
+  font-size: 13px;
+}
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 24px; }
+.footer-grid h5 { color: var(--bone); font-size: 14px; margin-bottom: 12px; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 7px; }
+.footer-legal { border-top: 1px solid var(--steel-line); padding-top: 18px; font-size: 12px; line-height: 1.8; }
+
+/* ---------- 플로팅 콜버튼 (모바일) ---------- */
+.float-call {
+  position: fixed;
+  bottom: 18px; right: 18px;
+  background: var(--danger);
+  color: #fff;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  z-index: 60;
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .nav-links { display: none; }
+  .symptom-line { grid-template-columns: 1fr; }
+  .symptom-card { border-right: none; }
+  .coverage-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .process { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

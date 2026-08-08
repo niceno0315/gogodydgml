@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niceno0315.github.io/gogodydgml/sitemap.xml
