@@ -342,7 +342,7 @@ section { padding: 72px 0; }
 .coverage .section-head p { color: var(--steel); }
 .coverage-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
 }
 .coverage-grid a {
