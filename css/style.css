@@ -312,16 +312,6 @@ section { padding: 72px 0; }
   border-radius: 4px;
   letter-spacing: 0.01em;
 }
-.portfolio-thumb.no-photo {
-  background: linear-gradient(135deg, var(--ink), var(--ink-soft));
-  color: var(--amber);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-}
 .portfolio-card h4 { font-size: 15.5px; margin: 16px 18px 6px; }
 .portfolio-card p { font-size: 13px; color: var(--steel); margin: 0 18px 18px; }
 
