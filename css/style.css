@@ -473,6 +473,27 @@ footer.site {
 .footer-grid li { margin-bottom: 7px; }
 .footer-legal { border-top: 1px solid var(--steel-line); padding-top: 18px; font-size: 12px; line-height: 1.8; }
 
+/* ---------- 시공사례 상세글 ---------- */
+.case-hero {
+  background: var(--bone-dim);
+  padding: 44px 0 36px;
+}
+.case-hero .case-back { font-size: 13px; font-weight: 700; color: var(--ink); display: inline-block; margin-bottom: 14px; }
+.case-hero h1 { font-size: 30px; color: var(--navy); }
+.case-hero .meta { color: var(--steel); font-size: 14px; margin-top: 10px; }
+.case-article { padding: 48px 0 64px; }
+.case-article .wrap { max-width: 760px; }
+.case-article img.full {
+  width: 100%;
+  border-radius: 6px;
+  margin: 8px 0 32px;
+  display: block;
+}
+.case-article h2 { font-size: 20px; color: var(--ink); margin: 36px 0 12px; }
+.case-article h2:first-of-type { margin-top: 0; }
+.case-article p { margin: 0 0 16px; color: var(--navy); font-size: 15.5px; line-height: 1.8; }
+.case-article ul { margin: 0 0 16px; padding-left: 20px; color: var(--navy); font-size: 15.5px; line-height: 1.8; }
+
 /* ---------- 플로팅 콜버튼 (모바일) ---------- */
 .float-call {
   position: fixed;
