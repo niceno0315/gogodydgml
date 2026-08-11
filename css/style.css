@@ -473,11 +473,25 @@ footer.site {
 .case-hero .meta { color: var(--steel); font-size: 14px; margin-top: 10px; }
 .case-article { padding: 48px 0 64px; }
 .case-article .wrap { max-width: 760px; }
-.case-article img.full {
+.case-article img.full,
+.case-article video.full {
   width: 100%;
   border-radius: 6px;
   margin: 8px 0 32px;
   display: block;
+  background: #000;
+}
+.case-article .photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 8px 0 32px;
+}
+.case-article .photo-row img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  margin: 0;
 }
 .case-article h2 { font-size: 20px; color: var(--ink); margin: 36px 0 12px; }
 .case-article h2:first-of-type { margin-top: 0; }
