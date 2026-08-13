@@ -481,6 +481,12 @@ footer.site {
   display: block;
   background: #000;
 }
+.case-article video.full {
+  max-height: 480px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
 .case-article .photo-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
