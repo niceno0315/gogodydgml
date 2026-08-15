@@ -289,6 +289,10 @@ section { padding: 72px 0; }
   overflow: hidden;
 }
 .portfolio-card:hover { border-color: var(--amber); }
+.portfolio-grid .portfolio-card:only-child {
+  max-width: 280px;
+  justify-self: start;
+}
 .portfolio-thumb {
   position: relative;
   height: 160px;
